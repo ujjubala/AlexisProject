@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title="Parent Component">
+       <div class="parent-wrapper">
+        Data Received from Child = {parentData} 
+        <c-mock-test-child onsenddataevent = {parentJSDataHandler}></c-mock-test-child>
+        <c-mock-test-child-one child-one-data = {parentData}></c-mock-test-child-one>
+      </div>
+    </lightning-card>
+</template>

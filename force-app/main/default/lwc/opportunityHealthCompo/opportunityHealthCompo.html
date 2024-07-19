@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Opportunity Compo" icon-name="custom:custom30">
+        <div style="height:500px; width:500px;">
+        <lightning-datatable
+           key-field    = "Id"
+           data         = {receivedOppList}
+           columns      = {oppColumns}
+           draft-values = {draftValues}>
+        </lightning-datatable>
+    </div>
+    </lightning-card>
+</template>

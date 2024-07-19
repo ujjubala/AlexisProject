@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Contacts">
+    <template lwc:if={showTableFlag}>
+        <lightning-datatable
+            key-field       =   "Id"
+            data            =   {contactListChild}
+            columns         =   {columns}    
+            draft-values    =   {draftValues}  >
+        </lightning-datatable>
+    </template>
+           
+    </lightning-card>
+</template>

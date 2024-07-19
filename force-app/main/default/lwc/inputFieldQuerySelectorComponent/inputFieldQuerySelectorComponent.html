@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Input Field With Query Selector">
+        <lightning-record-edit-form object-api-name="Account">
+            <lightning-input dataformfield="fromDate1" type="date" label="Select From Date"></lightning-input>
+            <lightning-input dataformfield="toDate1" type="date" label="Select To Date"></lightning-input>
+            <lightning-input-field field-name="Type" onchange={dateTypeHandler}></lightning-input-field>
+        </lightning-record-edit-form>
+        Total Records Found = {totalRecords}
+    <template lwc:if={showTableFlag}>
+        <lightning-datatable
+        key-field= "Id"
+        data= {accList}
+        columns= {accColumns}    
+        draft-values= {draftValues}>
+      </lightning-datatable>
+    </template>  
+        </lightning-card>
+</template>

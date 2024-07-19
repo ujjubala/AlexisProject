@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Contact Child Compo" icon-name="custom:custom15">
+        <lightning-datatable 
+           key-field    = "Id"
+           data         = {receivedContactList}
+           columns      = {columns}
+           draft-values = {draftValues}
+          hide-checkbox-column >
+        </lightning-datatable>
+    </lightning-card>
+</template>

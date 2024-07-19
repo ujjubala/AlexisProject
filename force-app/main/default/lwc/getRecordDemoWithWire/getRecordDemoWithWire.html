@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Get Record Demo" icon-name="standard:Account">
+        <template if:true= {record}>
+        <div class="slds-m-around_medium">
+            <p> Name         = {name} </p>
+            <p> Rating       = {rating} </p>
+            <p> Type         = {type} </p>
+            <p> Created Date = {cDate} </p>
+        </div>
+        </template>
+    </lightning-card>
+</template>

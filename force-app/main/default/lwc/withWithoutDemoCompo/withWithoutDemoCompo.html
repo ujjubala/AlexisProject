@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="All Account Records" >
+        <div class="heading">
+           Total Records = {totalRecords} </br>
+        </div>
+        <div class="container">
+        <lightning-datatable
+            key-field       = "Id"
+            data            =  {accList}
+            columns         =  {columns} 
+            draft-values    =  {draftValues}   >
+        </lightning-datatable>
+    </div>
+    </lightning-card>
+    
+</template>

@@ -1,0 +1,31 @@
+<template>
+    <lightning-card title="Currency Picklist" icon-name="custom:currency">
+       <div class="'slds-p-around_medium">
+       <lightning-combobox
+                name="fromCurrency"
+                label="Select Currency From"
+                value={value}
+                onchange={handleFromCurrencyChange}
+                options={currencyOptions}>
+        </lightning-combobox>
+        <lightning-input type="text" name="amount" label="Amount" onchange = {handleAmountChange}></lightning-input>
+        <lightning-combobox
+                name="toCurrency"
+                label="Select Currency To"
+                value= {toCurrency}
+                options= {currencyOptions}
+                onchange= {handleToCurrencyChange}>
+            </lightning-combobox>
+            
+            <!-- <lightning-button
+                label   = "Convert"
+                variant = "brand"
+                onclick= {convertCurrency}
+                class="slds-m-top_medium">
+            </lightning-button> -->
+            <template lwc:if = {convertedAmount}>
+                <p class="slds-m-top_medium">Converted Amount: {convertedAmount}</p>
+            </template>
+    </div>
+    </lightning-card>
+</template>

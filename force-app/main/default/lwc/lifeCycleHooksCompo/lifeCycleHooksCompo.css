@@ -1,0 +1,10 @@
+.container{
+    font-size: 30px;
+    padding: 10px ;
+    background:lightgreen;
+    color: blueviolet;
+    text-align: center;
+    font-weight: bold;
+    display: block;
+    border: 10px solid red;
+}

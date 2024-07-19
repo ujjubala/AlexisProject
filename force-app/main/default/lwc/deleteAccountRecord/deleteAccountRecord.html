@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="On Row Selection" icon-name="utility:user">
+        <template if:true = {accounts}>
+            Records Selected = {totalSelectedRecords}
+            <lightning-datatable
+                key-field       = "Id"
+                data            =  {accounts}
+                columns         =  {accColumns}
+                draft-values    =  {draftValues}
+                onrowselection  =  {handleRowSelection} >
+            </lightning-datatable>
+        </template>
+        
+    <lightning-button variant="brand" icon-name="utility:delete" label="Delete Selected Records" onclick={handleDelete}></lightning-button>
+    </lightning-card>
+</template>

@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Child" icon-name="custom:custom40">
+        <div class="container">
+            <lightning-datatable 
+              key-field     = "Id"
+              data          = {childCaseList}
+              columns       = {columns}
+              draft-values  = {draftValues}>
+            </lightning-datatable>
+        </div>
+        <lightning-button variant="brand" label="Close" icon-name="utility:close" onclick={closeButtonHandler}></lightning-button>
+    </lightning-card>
+</template>

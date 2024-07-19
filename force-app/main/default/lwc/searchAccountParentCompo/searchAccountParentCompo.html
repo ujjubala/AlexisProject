@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Send Parent Data To child" >
+    <lightning-record-edit-form object-api-name="Account">
+        <lightning-input-field field-name="Name" onchange={nameHandler}></lightning-input-field>
+    </lightning-record-edit-form><br/>
+    
+    <lightning-button variant="brand" icon-name="utility:send" label="Display Related Contacts" onclick={sendAccountNameHandler}></lightning-button>
+    <template lwc:if = {showPopupModalFlag}>
+       <c-related-contact-child-compo contact-list-child = {contactList} onclosemypopupmodalevent={closePopupModalHandler} ></c-related-contact-child-compo>
+    </template>
+    </lightning-card>
+</template>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>State__c</fullName>
+    <externalId>false</externalId>
+    <label>State</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Country__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Maharashtra</fullName>
+                <default>false</default>
+                <label>Maharashtra</label>
+            </value>
+            <value>
+                <fullName>Uttar Pradesh</fullName>
+                <default>false</default>
+                <label>Uttar Pradesh</label>
+            </value>
+            <value>
+                <fullName>Sindh</fullName>
+                <default>false</default>
+                <label>Sindh</label>
+            </value>
+            <value>
+                <fullName>Balochistan</fullName>
+                <default>false</default>
+                <label>Balochistan</label>
+            </value>
+            <value>
+                <fullName>Azad Kashmir</fullName>
+                <default>false</default>
+                <label>Azad Kashmir</label>
+            </value>
+            <value>
+                <fullName>Hokkaido</fullName>
+                <default>false</default>
+                <label>Hokkaido</label>
+            </value>
+            <value>
+                <fullName>Chubu</fullName>
+                <default>false</default>
+                <label>Chubu</label>
+            </value>
+            <value>
+                <fullName>Ehime</fullName>
+                <default>false</default>
+                <label>Ehime</label>
+            </value>
+            <value>
+                <fullName>Kansal</fullName>
+                <default>false</default>
+                <label>Kansal</label>
+            </value>
+            <value>
+                <fullName>Provinces Of China</fullName>
+                <default>false</default>
+                <label>Provinces Of China</label>
+            </value>
+            <value>
+                <fullName>Gujrat</fullName>
+                <default>false</default>
+                <label>Gujrat</label>
+            </value>
+            <value>
+                <fullName>West Bengal</fullName>
+                <default>false</default>
+                <label>West Bengal</label>
+            </value>
+            <value>
+                <fullName>Tamilnadu</fullName>
+                <default>false</default>
+                <label>Tamilnadu</label>
+            </value>
+            <value>
+                <fullName>China State</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>China State</label>
+            </value>
+            <value>
+                <fullName>Delhi</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Delhi</label>
+            </value>
+            <value>
+                <fullName>Japan State</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Japan State</label>
+            </value>
+            <value>
+                <fullName>Pakistan State</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Pakistan State</label>
+            </value>
+            <value>
+                <fullName>Telangana</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Telangana</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Pakistan</controllingFieldValue>
+            <valueName>Sindh</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pakistan</controllingFieldValue>
+            <valueName>Balochistan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pakistan</controllingFieldValue>
+            <valueName>Azad Kashmir</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>Hokkaido</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>Chubu</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>Ehime</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>Kansal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>China</controllingFieldValue>
+            <valueName>Provinces Of China</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bharat</controllingFieldValue>
+            <valueName>Maharashtra</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bharat</controllingFieldValue>
+            <valueName>Uttar Pradesh</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bharat</controllingFieldValue>
+            <valueName>Gujrat</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bharat</controllingFieldValue>
+            <valueName>West Bengal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bharat</controllingFieldValue>
+            <valueName>Tamilnadu</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

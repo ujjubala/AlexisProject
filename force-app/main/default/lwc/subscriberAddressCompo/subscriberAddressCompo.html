@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Addresses Of Applicant">
+        <template lwc:if={showTableFlag}>
+          <lightning-datatable
+                key-field="Id"
+                data={applicantAddressList}
+                columns={columns}    
+                draft-values={draftValues}  >
+           </lightning-datatable>
+        </template>    
+    </lightning-card>
+</template>

@@ -1,0 +1,34 @@
+<template>
+    
+    <lightning-card title= "Account Rating and Type" icon-name="standard:Account">
+        <lightning-record-edit-form object-api-name= "Account">
+            <lightning-input-field field-name= "Rating" onchange= {ratingHandler}></lightning-input-field>
+            <lightning-input-field field-name= "Type" onchange=  {typeHandler}></lightning-input-field>
+            <lightning-input type="date" data-formfield="fromDate" name="fromDate" label="Select From Date"></lightning-input>
+            <lightning-input  type="date" class="dateCmp" label="Select To Date" onchange = {dateHandler}></lightning-input> <br/>
+        </lightning-record-edit-form>
+        <br/>
+            <lightning-button variant= "brand" label="Search Account" icon-name="utility:search" onclick={searchButtonHandler}></lightning-button>
+            <div class = "spinner">
+                <template lwc:if= {showSpinnerFlag}>
+                    <lightning-spinner alternative-text="Loading" variant="brand" size="medium"></lightning-spinner>
+                </template>
+            </div>
+           <div class="container">
+            <p> Total Records = {totalRecordsFound} </p>
+           </div>
+           
+            <template lwc:if= {showTableFlag}>
+                <div class="slds-m-around_medium">
+                    <lightning-datatable 
+                        key-field     = "Id"
+                        data          = {accList}
+                        columns       = {columns}
+                        draft-values  = {draftValues}>
+                    </lightning-datatable>    
+                </div>
+            </template>
+            
+        
+    </lightning-card>
+</template>

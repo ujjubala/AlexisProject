@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prv_if_R_is_H_or_C_n_SLA_is_G_or_P_n_SIC</fullName>
+    <active>false</active>
+    <description>Prevent Account if Rating is Hot or Cold and SLA is Gold or Platinum and SIC code is Blank</description>
+    <errorConditionFormula>(ISPICKVAL(Rating , &apos;Hot&apos;) ||  ISPICKVAL(Rating , &apos;Cold&apos;)) 
+  &amp;&amp; 
+(ISPICKVAL(SLA__c, &apos;Gold&apos;)  || ISPICKVAL( SLA__c , &apos;Platinum&apos;))
+ &amp;&amp; ISBLANK(Sic)</errorConditionFormula>
+    <errorMessage>Account with blank SIC Code  and Hot or Cold Rating and SLA with Gold or Platinum not allowed</errorMessage>
+</ValidationRule>

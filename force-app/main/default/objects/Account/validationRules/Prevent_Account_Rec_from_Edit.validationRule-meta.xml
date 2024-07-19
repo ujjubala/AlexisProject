@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Account_Rec_from_Edit</fullName>
+    <active>false</active>
+    <errorConditionFormula>NOT(ISNEW())</errorConditionFormula>
+    <errorMessage>Record can not be Edited</errorMessage>
+</ValidationRule>

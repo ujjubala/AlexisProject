@@ -1,0 +1,32 @@
+<template>
+    <lightning-card title="Account Records Delete">
+            <lightning-record-edit-form object-api-name="Account">
+               
+                <lightning-input data-formfield="fromDate" type="Date" label="Select From Date"></lightning-input>
+                <lightning-input data-formfield="toDate" type="Date"   label="Select To Date"></lightning-input>
+                <lightning-input-field field-name="Type" onchange={typeHandler}></lightning-input-field>
+                <lightning-button variant="destructive" icon-name="utility:delete" label="Delete Selected Records" onclick={deleteSelectedRecordsHandler}></lightning-button>                 
+          </lightning-record-edit-form>
+          
+       
+        Data Table Total Records Found = {totalRecord} <br/>
+        Total Records Selected = {totalSelectedRows} <br/>
+    
+        <!--DATA TABLE START-->
+        <lightning-datatable
+        key-field="Id"
+        data={accList}
+        columns={accColumns}    
+        draft-values={draftValues}
+        onrowselection={selectedRecordsHandler} >
+        </lightning-datatable>
+     <!-- Spinner Condition Start-->
+    <template lwc:if={showSpinnerFlag}>
+      <div class="exampleHolder">
+        <lightning-spinner alternative-text="Loading" size="medium"> </lightning-spinner>
+      </div>
+    </template>
+    <!-- Spinner Condition End-->
+    </lightning-card>
+    </template>
+    

@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title=" Account Parent" icon-name="standard:Account">
+        <lightning-record-edit-form object-api-name="Account">
+            <lightning-input-field field-name="Name" onchange= {nameHandler}></lightning-input-field> 
+        </lightning-record-edit-form>
+        <lightning-button variant="brand" label="Send Cases" icon-name="utility:send" onclick={sendButtonHandler}></lightning-button>
+        <div class="slds-m-around_medium">
+          <template lwc:if= {showTableFlag}>
+            <c-office-task-child child-case-list = {parentCaseList} onclosedatatableevent = {closeButtonHandler}></c-office-task-child>
+        </template>  
+        </div>
+    </lightning-card>
+</template>

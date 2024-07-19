@@ -1,0 +1,50 @@
+<template>
+    <lightning-card title="Case Details" icon-name="custom:custom20">
+        <lightning-record-edit-form object-api-name="Case">
+            <lightning-input type="text" name="caseNum" label="Enter Case Number" onchange= {handleCaseNum}></lightning-input>
+            <lightning-button variant="brand" label="Show Cases" icon-name="utility:search" onclick= {caseButtonHandler}></lightning-button>
+            <lightning-input-field field-name="Status" onchange= {statusHandler}></lightning-input-field>
+        </lightning-record-edit-form>
+        <div class="spinner">
+            <template lwc:if= {showSpinnerFlag}>
+               <lightning-spinner alternative-text="loading" variant="brand" size="medium"></lightning-spinner>
+            </template>
+        </div>
+        <template lwc:if= {showTableFlag1}>
+          <div class="slds-m-around_medium">
+             <lightning-datatable
+                   key-field     = "Id"
+                   data          = {caseList1}
+                   columns       = {columns}
+                   draft-values  = {draftValues}>
+            </lightning-datatable>
+          </div>
+        </template>
+        <template lwc:if= {showTableFlag2}>
+            <p style="color:green">Total Records : {totalRecordsFound} </p>
+        </template>
+        <template lwc:if= {showTableFlag2}>
+            <div class="slds-m-around_medium">
+               <lightning-datatable
+                     key-field     = "Id"
+                     data          = {caseList2}
+                     columns       = {columns}
+                     draft-values  = {draftValues}>
+              </lightning-datatable>
+             </div>
+          </template>
+          <template lwc:if= {showTableFlag2}>
+          <span>Page{page}/Page{totalPages}</span>
+        </template>
+          <br>
+          <br>
+          <template lwc:if= {showTableFlag2}>
+           <div class="pagination">
+            <lightning-button label="First" onclick={handleFirst} disabled= {isFirstPage}></lightning-button>
+            <lightning-button label="Previous" onclick={handlePrevious} disabled= {isFirstPage} ></lightning-button>
+            <lightning-button label="Next" onclick={handleNext} disabled= {isLastPage}></lightning-button>
+            <lightning-button label="Last" onclick={handleLast} disabled= {isLastPage}></lightning-button>
+           </div>    
+        </template>
+    </lightning-card>
+</template>

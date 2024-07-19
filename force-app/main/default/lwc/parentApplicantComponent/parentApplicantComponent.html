@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title="Applicant Record">
+        <lightning-record-edit-form object-api-name="Applicant__c">
+            <lightning-input dataformfield="applicantId" type="text" label="Applicant ID" onchange= {nameHandler}></lightning-input>
+        </lightning-record-edit-form>
+        <lightning-button variant="brand" icon-name="utility:show" label="Display" onclick={showRelatedAddressHandler}></lightning-button>
+        <c-related-address-child-compo applicant-address-list = {relatedAddressList}></c-related-address-child-compo>
+    </lightning-card>
+</template>

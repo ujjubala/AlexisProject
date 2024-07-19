@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_if_age_less_than_18_and_Gen_Male</fullName>
+    <active>false</active>
+    <errorConditionFormula>AND(Age__c &lt; 18, ISPICKVAL( Gender__c , &apos;Male&apos;) )</errorConditionFormula>
+    <errorMessage>Male Applicants Age can&apos;t be less than 18 years</errorMessage>
+</ValidationRule>

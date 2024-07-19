@@ -1,0 +1,17 @@
+    <template>
+        <lightning-card title="Case Compo" icon-name="custom:custom40">
+            <div>
+                <p style="color:green">First Name = {firstName} </p>
+                <p style="color:green">Last Name = {lastName} </p>
+            </div>
+            
+            <lightning-datatable
+               key-field    = "Id"
+               data         = {receivedCaseList}
+               columns      = {caseColumns}
+               draft-values = {draftValues}>
+            </lightning-datatable>
+        
+        </lightning-card>
+    
+</template>

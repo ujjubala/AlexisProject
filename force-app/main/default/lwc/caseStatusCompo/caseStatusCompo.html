@@ -1,0 +1,15 @@
+<template>
+    <div class= {componentClass1}>
+       <lightning-button variant="brand" label="Re-open Case" onclick= {reopenCaseHandler}></lightning-button>
+    </div>
+    <div class= {componentClass2}>
+        <lightning-button variant="brand" label="Escalate" onclick= {escalateCaseHandler}></lightning-button>
+    </div>
+    <div class= {componentClass2}>
+        <lightning-textarea 
+            label    =  "Description" 
+            value    =  {caseDesc} 
+            onchange =  {handleDescriptionChange}>
+        </lightning-textarea>
+    </div>
+ </template>

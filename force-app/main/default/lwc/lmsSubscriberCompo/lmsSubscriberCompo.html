@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="LMS Subscriber">
+    <template lwc:if={showTableFlag}>
+        <lightning-datatable
+        key-field="Id"
+        data={conList}
+        columns={columns}    
+        draft-values={draftValues}>
+        </lightning-datatable>
+    </template>
+    </lightning-card>
+</template>

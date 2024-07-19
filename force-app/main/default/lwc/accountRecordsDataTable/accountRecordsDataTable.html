@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title = "Account Records in Data Table">
+        <lightning-record-edit-form object-api-name="Account">
+            <!-- <lightning-input-field field-name="Type" onchange = {typeHandler}></lightning-input-field> -->
+  <lightning-button icon-name="utility:search" label="Show Latest 10 Accounts" variant="brand" onclick={latestAccountRecordsButtonHandler}></lightning-button>
+        </lightning-record-edit-form>
+    Total Records Found = {totalRecordsFound}
+    <!--Conditional statement start-->
+    <template lwc:if    = {showTableFlag}>
+    <!--Data Table Start-->
+    <lightning-datatable  key-field="Id"
+        data={accList}
+        columns={columns}    
+        draft-values={draftValues} >
+    </lightning-datatable>
+    <!--Data Table End-->
+    </template>
+    <!--Conditional statement end-->
+  </lightning-card>
+</template>

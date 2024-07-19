@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title= "Contact Update From Community" icon-name= "custom:custom40">
+        <lightning-record-edit-form object-api-name= {objContact} record-id = {recordId} >
+            <lightning-input-field field-name = {firstName} onchange = {firstNameHandler}></lightning-input-field>
+            <lightning-input-field field-name = {lastName} onchange = {lastNameHandler}></lightning-input-field>
+            <lightning-input-field field-name = {mobileNum} onchange = {mobileNumHandler}></lightning-input-field>
+            <lightning-button variant = "brand" label = "verify" icon-name = "utility:send"  onclick = {verifyButtonHandler}> </lightning-button>
+            <template lwc:if= {validFlag}>
+                <lightning-icon icon-name= "action:approval" alternative-text = "Approved"></lightning-icon>
+            </template>
+            <template lwc:else>
+                <lightning-icon icon-name= "action:close" alternative-text = "Not Approved"></lightning-icon>
+            </template>
+        </lightning-record-edit-form>
+    </lightning-card>
+</template>

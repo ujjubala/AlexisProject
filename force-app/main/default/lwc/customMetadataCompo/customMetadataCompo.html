@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Custom Metadata Field" icon-name="custom:custom14" onsubmit={showSuccessToast}>
+    <lightning-record-edit-form object-api-name="TransactionLWC__c">
+        <lightning-input-field field-name = "Name__c" required="true"></lightning-input-field>
+        <lightning-input-field field-name = "Success_Code__c" required = "true" onchange={codeHandler}></lightning-input-field>
+        <lightning-input-field field-name =  "Account__c" required = "true"></lightning-input-field>
+        <lightning-input-field field-name =  "Message__c" required = "true" value = {msg}></lightning-input-field>
+        <lightning-button type="submit" variant="brand" label="Save Record" icon-name="utility:save"></lightning-button>
+    </lightning-record-edit-form>
+    
+    </lightning-card>
+    
+</template>

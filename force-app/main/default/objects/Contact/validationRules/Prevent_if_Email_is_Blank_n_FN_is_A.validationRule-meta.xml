@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_if_Email_is_Blank_n_FN_is_A</fullName>
+    <active>false</active>
+    <description>Prevent Account if Email Id is Blank and First Name starts with A</description>
+    <errorConditionFormula>ISBLANK( Email )  ||  BEGINS( FirstName , &apos;A&apos;)</errorConditionFormula>
+    <errorMessage>Email ID should not be blank Or Name must not start with &apos;A&apos;</errorMessage>
+</ValidationRule>

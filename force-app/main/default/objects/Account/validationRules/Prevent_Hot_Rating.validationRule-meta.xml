@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Hot_Rating</fullName>
+    <active>false</active>
+    <description>Prevent  Hot Account Rating</description>
+    <errorConditionFormula>ISPICKVAL(Rating,&apos;Hot&apos; )</errorConditionFormula>
+    <errorDisplayField>Rating</errorDisplayField>
+    <errorMessage>Account Rating  Hot not permitted</errorMessage>
+</ValidationRule>

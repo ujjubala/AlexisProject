@@ -1,0 +1,38 @@
+<template>
+    <lightning-card title="Weather Information" variant="narrow" icon-name="utility:world">
+        <div class="slds-p-around_small">
+            <lightning-input type="text" label="Enter City Name" placeholder="e.g. Noida,Hyderabad,Nagpur,Pune" onchange={nameHandler}></lightning-input>
+        </div>
+        <div class="slds-p-around_medium">
+            <lightning-button variant="brand" label="Get Weather Details" onclick={handleWeatherDetails}></lightning-button>
+        </div>
+        <template lwc:if={showWeatherDetailsFlag}>
+            <div class="c-container">
+            <lightning-layout horizontal-align="spread" multiple-rows>
+                <lightning-layout-item padding="around-small" size="12">
+                   <span class="slds-text-title_bold"> City : {cityName} </span>
+                </lightning-layout-item>
+                <lightning-layout-item padding="around-small" size="6">
+                                <span class="slds-text-title_bold"> Temperature : {weatherDetails.temp} </span>
+                </lightning-layout-item>
+                        <lightning-layout-item padding="around-small" size="6">
+                   <span class="slds-text-title_bold"> Feels Like : {weatherDetails.feels_like} </span>
+                </lightning-layout-item>
+                <lightning-layout-item padding="around-small" size="6">
+                   <span class="slds-text-title_bold"> Pressure : {weatherDetails.pressure} </span>
+                </lightning-layout-item>
+                <lightning-layout-item padding="around-small" size="6">
+                                <span class="slds-text-title_bold"> Humidity : {weatherDetails.humidity} </span>
+                </lightning-layout-item>
+                <lightning-layout-item padding="around-small" size="6">
+                                <span class="slds-text-title_bold"> Min Temp : {weatherDetails.temp_min} </span>
+                </lightning-layout-item>
+                        <lightning-layout-item padding="around-small" size="6">
+                                <span class="slds-text-title_bold"> Max Temp : {weatherDetails.temp_max} </span>
+                </lightning-layout-item>
+                    </lightning-layout>
+        
+        </div>
+    </template>
+    </lightning-card>
+</template>

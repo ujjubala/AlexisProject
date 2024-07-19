@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title= "Verify Lead Email" icon-name= "custom:custom40">
+        <lightning-record-edit-form object-api-name= "Lead">
+            <lightning-input-field field-name= "FirstName" onchange = {firstNameHandler}></lightning-input-field>
+            <lightning-input-field field-name= "LastName" onchange  = {lastNameHandler}></lightning-input-field>
+            <lightning-input-field field-name= "Company" onchange   = {companyHandler}></lightning-input-field>
+            <lightning-input-field field-name=  "Status" onchange   = {statusHandler}></lightning-input-field>
+            <lightning-input-field field-name=  "Email" onchange    = {emailHandler}></lightning-input-field>
+            <lightning-button variant= "brand" label= "Verify Email" icon-name= "utility:send" onclick = {buttonHandler}></lightning-button>
+            <template lwc:if={validFlag}>
+                <lightning-icon icon-name="action:approval" alternative-text="Approved"></lightning-icon>
+            </template>
+        
+            <template lwc:else>
+              <lightning-icon icon-name="action:close" alternative-text="Not Approved"></lightning-icon>
+            </template>
+        </lightning-record-edit-form>
+    </lightning-card>
+</template>

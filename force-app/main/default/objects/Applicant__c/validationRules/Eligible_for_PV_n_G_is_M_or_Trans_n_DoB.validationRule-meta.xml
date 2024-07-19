@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Eligible_for_PV_n_G_is_M_or_Trans_n_DoB</fullName>
+    <active>false</active>
+    <errorConditionFormula>( Police_Verification__c ) &amp;&amp; ( ISPICKVAL( Gender__c, &apos;Male&apos;) ||  ISPICKVAL( Gender__c , &apos;Transgender&apos;) )  &amp;&amp;  
+   (YEAR(DOB__c)  &lt;  2000)</errorConditionFormula>
+    <errorMessage>Male or Transgender Applicant withr PV born before 2000 not allowed</errorMessage>
+</ValidationRule>

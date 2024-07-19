@@ -1,0 +1,35 @@
+<template>
+    <lightning-card title="Address">
+        <!-- <template lwc:if={showTableFlag} > -->
+            <lightning-datatable
+                key-field="Id"
+                data={applicantAddressList}
+                columns={columns}    
+                draft-values={draftValues}  >
+           </lightning-datatable>
+    <!-- </template> -->
+
+        <!-- <table class="slds-table slds-table--bordered slds-table--striped">
+            <thead>
+             <tr>
+                 <th scope="col"><span class="slds-truncate">Country__c </span></th>
+                 <th scope="col"><span class="slds-truncate">State__c</span></th>
+                 <th scope="col"><span class="slds-truncate">City__c </span></th>
+                 
+            </tr>
+            </thead>
+            <tbody>
+              <template for:each={applicantAddressList} for:item= "objAddress">                
+                    <tr key={objAddress.Id}>
+                                      <td>{objAddress.Country__c}</td>
+                                      <td>{objAddress.State__c}</td>
+                                      <td>{objAddress.City__c}</td>
+                                
+                    </tr>
+                </template>
+                
+            </tbody>
+            </table> -->
+
+    </lightning-card>
+</template>

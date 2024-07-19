@@ -1,0 +1,8 @@
+<template>
+    <lightning-card title="LMS Publisher">
+        <lightning-record-edit-form object-api-name="Account">
+            <lightning-input-field field-name="Name" onchange={nameHandler}></lightning-input-field>
+        <lightning-button variant="brand" icon-name="utility:send" label="Send" onclick={sendDataHandler}></lightning-button>
+        </lightning-record-edit-form>
+    </lightning-card>
+</template>

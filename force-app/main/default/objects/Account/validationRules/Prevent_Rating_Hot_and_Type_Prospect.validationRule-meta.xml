@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Rating_Hot_and_Type_Prospect</fullName>
+    <active>false</active>
+    <errorConditionFormula>ISPICKVAL(Rating,&apos;Hot&apos;)   &amp;&amp;   ISPICKVAL(Type, &apos;Prospect&apos;)</errorConditionFormula>
+    <errorMessage>Rating can&apos;t be Hot when Type is Prospect</errorMessage>
+</ValidationRule>

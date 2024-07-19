@@ -1,0 +1,8 @@
+<template>
+    <lightning-card title="Applicant Publisher">
+        <lightning-record-edit-form object-api-name="Applicant__c">
+            <lightning-input dataformfield="applicantId" type="text" label="Applicant ID" onchange= {nameHandler}></lightning-input>
+            <lightning-button variant="brand" icon-name="utility:search" label="Search" onclick={showRelatedAddressHandler}></lightning-button>
+        </lightning-record-edit-form>
+    </lightning-card>
+</template>

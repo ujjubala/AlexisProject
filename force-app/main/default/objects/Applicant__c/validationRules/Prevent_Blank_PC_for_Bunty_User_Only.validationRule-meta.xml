@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Blank_PC_for_Bunty_User_Only</fullName>
+    <active>false</active>
+    <description>Prevent Blank Pan Card for Bunty User Only</description>
+    <errorConditionFormula>ISBLANK( PAN_Card__c )  &amp;&amp;  $User.Id = &apos;0055j000009QYW2&apos;</errorConditionFormula>
+    <errorMessage>Pan Card can&apos;t be Blank</errorMessage>
+</ValidationRule>

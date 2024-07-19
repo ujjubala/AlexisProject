@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Applicant_if_Age_is_less_than_18</fullName>
+    <active>false</active>
+    <errorConditionFormula>Age__c &lt; 18</errorConditionFormula>
+    <errorDisplayField>DOB__c</errorDisplayField>
+    <errorMessage>Applicant must not be less than 18</errorMessage>
+</ValidationRule>

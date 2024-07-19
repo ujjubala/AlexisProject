@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Popup Account Parent" icon-name="standard:Account">
+        <lightning-record-edit-form object-api-name="Account">
+            <lightning-input-field field-name= "Name" onchange = {nameHandler}></lightning-input-field>
+            <lightning-input-field field-name= "Rating" onchange= {ratingHandler}></lightning-input-field>
+        </lightning-record-edit-form>
+        <lightning-button variant="brand" label="Send Oppo" icon-name="utility:search" onclick={buttonHandler}></lightning-button>
+        <!-- <template lwc:if= {popupModalFlag}> -->
+           <div class="slds-m-around_medium">
+             <c-popup-oppo-child child-oppo-list = {parentOppoList} received-parent-name = {parentName} total-records = {totalRecordsFound}></c-popup-oppo-child>
+           </div>
+        <!-- </template> -->
+    </lightning-card>
+</template>

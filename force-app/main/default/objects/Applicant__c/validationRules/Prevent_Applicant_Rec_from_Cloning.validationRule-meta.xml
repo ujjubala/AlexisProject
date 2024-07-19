@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Applicant_Rec_from_Cloning</fullName>
+    <active>false</active>
+    <errorConditionFormula>ISCLONE()</errorConditionFormula>
+    <errorMessage>Applicant Record not allowed to clone</errorMessage>
+</ValidationRule>

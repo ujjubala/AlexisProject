@@ -1,0 +1,37 @@
+<template>
+    <lightning-card title = "Search Account Record" >
+        <lightning-record-edit-form object-api-name = "Account" >
+            <lightning-input-field field-name= "Type"   onchange =   {typeHandler} ></lightning-input-field>
+            <lightning-input-field field-name= "Rating" onchange = {ratingHandler} ></lightning-input-field>
+        </lightning-record-edit-form>
+    <!-- <lightning-button icon-name="utility:search" label="Search account" variant="brand" onclick = {searchAccountButtonHandler}></lightning-button> -->
+    <br/>
+    Total Records = {totalRecordsFound}
+    <template lwc:if={showTableFlag}>
+    <!--Table start-->
+    <table class="slds-table slds-table--bordered slds-table--striped">
+        <thead>
+            <tr>
+                 <th scope="col"><span class="slds-truncate">Name </span></th>
+                 <th scope="col"><span class="slds-truncate">Rating</span></th>
+                 <th scope="col"><span class="slds-truncate">Type </span></th>
+                 <!-- <th scope="col"><span class="slds-truncate">Created Date</span></th> -->
+                 <th scope="col"><span class="slds-truncate">SLA</span></th>
+            </tr>
+        </thead>
+        <tbody>
+            <template for:each = {accList} for:item ="objAcc">
+                <tr key = {objAcc.Id}>
+                    <td> {objAcc.Name}</td>
+                    <td> {objAcc.Rating} </td>
+                    <td> {objAcc.Type} </td>
+                    <!-- <td><lightning-formatted-date-time value={objAcc.CreatedDate}></lightning-formatted-date-time> </td> -->
+                    <td> {objAcc.SLA__c} </td>
+                </tr>
+            </template >
+        </tbody>
+    </table>
+    <!--Table End-->
+</template>
+</lightning-card>
+</template>

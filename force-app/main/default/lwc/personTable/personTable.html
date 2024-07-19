@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Component Two" icon-name="custom:custom16">
+        <!-- Data Received = {compoData} -->
+        <div style="height : 300px;">
+        <lightning-datatable 
+            key-field       = "Id"
+            data            = {personData}
+            columns         = {columns}
+            draft-values    = {draftValues}
+            hide-checkbox-column>
+        </lightning-datatable>
+    </div>
+    </lightning-card>
+</template>

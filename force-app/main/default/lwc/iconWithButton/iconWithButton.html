@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Button With Icon" icon-name="custom:custom17">
+         <lightning-record-edit-form object-api-name= "Contact">
+            <lightning-input-field field-name= "FirstName" onchange = {firstNameHandler}></lightning-input-field>
+             <lightning-input-field field-name= "LastName" onchange =  {lastNameHandler}></lightning-input-field> 
+            <lightning-input-field field-name= "MobilePhone" onchange = {mobilePhoneHandler}></lightning-input-field>
+         
+         <lightning-button variant="brand" label="verify" icon-name="utility:send" onclick= {verifyButtonHandler}> </lightning-button>
+            <template lwc:if= {validFlag}>
+                <lightning-icon icon-name= "action:approval"></lightning-icon>
+            </template>
+            <template lwc:else>
+              <lightning-icon icon-name= "action:close"></lightning-icon>
+            </template>
+        </lightning-record-edit-form>
+
+    </lightning-card>
+</template>

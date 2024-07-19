@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Search Account Record First Letter">
+        <lightning-record-edit-form object-api-name="Account">
+            <lightning-input-field field-name="Name" onchange={nameHandler} ></lightning-input-field>
+        </lightning-record-edit-form>
+        
+        Total Records Found DATA TABLE = {totalRecordsFound} <br/>
+
+        <template lwc:if={showTableFlag}>
+        <lightning-datatable
+            key-field="Id"
+            data={accList}
+            columns={columns}    
+            draft-values={draftValues}  >
+        </lightning-datatable>
+        </template>
+    </lightning-card>
+</template>

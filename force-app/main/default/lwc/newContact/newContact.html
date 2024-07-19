@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title = "Create New Contact" >
+        <lightning-record-edit-form object-api-name = {objContact}  onsubmit = {successToastMessage} >
+           <div class = "slds-grid" >
+              <div class = "slds-col slds-size_1-of-2">
+                 <lightning-input-field field-name  =  {salutation} > </lightning-input-field>    
+                 <lightning-input-field field-name  =  {firstName}  >  </lightning-input-field>
+                 <lightning-input-field field-name  =  {lastName}   > </lightning-input-field>
+              </div>
+              <div class="slds-col slds-size_1-of-2">
+                 <lightning-input-field field-name  =  {parenetAccount}  > </lightning-input-field>
+              </div>
+            </div>
+            <lightning-button type = "submit" variant = "brand" label = "Create New Contact"></lightning-button>
+        </lightning-record-edit-form>
+    </lightning-card>
+    
+</template>

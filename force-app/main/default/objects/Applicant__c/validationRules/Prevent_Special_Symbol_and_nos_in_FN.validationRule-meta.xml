@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Special_Symbol_and_nos_in_FN</fullName>
+    <active>false</active>
+    <description>Prevent Special symbols in First and Last Name</description>
+    <errorConditionFormula>NOT( REGEX( First_Name__c , &apos;^[a-z  A-Z]*$&apos;) ) || 
+NOT( REGEX( Last_Name__c  , &apos;^[a-z  A-Z]*$&apos;) )</errorConditionFormula>
+    <errorMessage>Not a Valid Name</errorMessage>
+</ValidationRule>

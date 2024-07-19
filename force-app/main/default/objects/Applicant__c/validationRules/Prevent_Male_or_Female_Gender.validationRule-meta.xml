@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Male_or_Female_Gender</fullName>
+    <active>false</active>
+    <errorConditionFormula>TEXT( Gender__c) = &apos;Male&apos;  ||  TEXT( Gender__c) = &apos;Female&apos;</errorConditionFormula>
+    <errorDisplayField>Gender__c</errorDisplayField>
+    <errorMessage>Male or Female Applicants are not Allowed for now</errorMessage>
+</ValidationRule>

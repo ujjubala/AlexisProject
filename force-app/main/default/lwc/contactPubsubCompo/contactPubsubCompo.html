@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title="ContactToCase" icon-name="custom:custom50">
+        <lightning-record-edit-form object-api-name="Contact">
+            <lightning-input-field field-name="FirstName" onchange= {firstNameHandler}></lightning-input-field>
+            <lightning-input-field field-name="LastName" onchange= {lastNameHandler}></lightning-input-field>
+            <lightning-button variant="brand" label="Send Cases" icon-name="utility:search" onclick={sendButtonHandler}></lightning-button>
+        </lightning-record-edit-form>
+    </lightning-card>
+</template>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Date_of_Birth_Mandatory_for_male_Pilot</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISBLANK( DOB__c )  &amp;&amp;  ISPICKVAL( Gender__c , &apos;Male&apos;)  &amp;&amp;  ($Profile.Name = &apos;Flight Operators&apos;)</errorConditionFormula>
+    <errorMessage>Date is Mandatory</errorMessage>
+</ValidationRule>

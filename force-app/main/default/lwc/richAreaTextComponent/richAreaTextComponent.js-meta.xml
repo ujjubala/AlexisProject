@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>
+        Rich Text Area Component
+    </masterLabel>
+    <description>
+         Rich Text Area Component
+    </description>
+    <targets>
+        <target>lightning__FlowScreen</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__FlowScreen">
+            <property name="placeHolder" type="String" label="Enter the Placeholder"/>
+            <property name="myLabel" type="String" label="Enter the Rich Text Label"/>
+            <property name="myValue" type="String" label="Used to accept the value from Flow"/>
+            <property name="reqd" type="Boolean" default="true" label="Enter Required or Not" />
+        </targetConfig>
+    </targetConfigs>
+
+</LightningComponentBundle>

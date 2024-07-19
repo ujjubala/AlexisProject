@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_Special_Symbol_and_Digit_in_Pilot_FLN</fullName>
+    <active>true</active>
+    <errorConditionFormula>NOT( REGEX(  First_Name__c  , &apos;^[a-zA-Z]*$&apos;) ) || 
+NOT( REGEX(  Last_Name__c   , &apos;^[a-zA-Z]*$&apos;) )</errorConditionFormula>
+    <errorMessage>No Special Symbols and Digits allowed in First and Last Name</errorMessage>
+</ValidationRule>

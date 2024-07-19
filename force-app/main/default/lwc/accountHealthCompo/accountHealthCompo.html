@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Parent Account" icon-name="custom:custom15">
+        <lightning-record-edit-form object-api-name="Account">
+            <lightning-input-field field-name="Name" onchange={nameHandler}></lightning-input-field>
+            <!-- <lightning-input-field field-name="Type" onchange={typeHandler}></lightning-input-field> -->
+        </lightning-record-edit-form>
+        <lightning-button variant="brand" label="Search Data" icon-name="utility:search" onclick={searchButtonHandler}></lightning-button>
+        <div class="slds-p-around_large">
+            <c-contact-health-compo received-contact-list = {contactList}></c-contact-health-compo>
+        </div>
+    </lightning-card>
+</template>

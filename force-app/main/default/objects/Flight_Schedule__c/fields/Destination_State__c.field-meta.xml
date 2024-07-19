@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Destination_State__c</fullName>
+    <externalId>false</externalId>
+    <label>Destination State</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Destination_Country__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Uttar Pradesh</fullName>
+                <default>false</default>
+                <label>Uttar Pradesh</label>
+            </value>
+            <value>
+                <fullName>Maharashtra</fullName>
+                <default>false</default>
+                <label>Maharashtra</label>
+            </value>
+            <value>
+                <fullName>West Bengal</fullName>
+                <default>false</default>
+                <label>West Bengal</label>
+            </value>
+            <value>
+                <fullName>China State</fullName>
+                <default>false</default>
+                <label>China State</label>
+            </value>
+            <value>
+                <fullName>Japan State</fullName>
+                <default>false</default>
+                <label>Japan State</label>
+            </value>
+            <value>
+                <fullName>Sindh</fullName>
+                <default>false</default>
+                <label>Sindh</label>
+            </value>
+            <value>
+                <fullName>Balochistan</fullName>
+                <default>false</default>
+                <label>Balochistan</label>
+            </value>
+            <value>
+                <fullName>Pakistan State</fullName>
+                <default>false</default>
+                <label>Pakistan State</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>India</controllingFieldValue>
+            <valueName>Uttar Pradesh</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>India</controllingFieldValue>
+            <valueName>Maharashtra</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>India</controllingFieldValue>
+            <valueName>West Bengal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>China</controllingFieldValue>
+            <valueName>China State</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>Japan State</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pakistan</controllingFieldValue>
+            <valueName>Sindh</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pakistan</controllingFieldValue>
+            <valueName>Balochistan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pakistan</controllingFieldValue>
+            <valueName>Pakistan State</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Blank_PAN_CARD_for_CustCare_PF</fullName>
+    <active>false</active>
+    <description>Prevent Blank Pan Card for Customer Care Profile</description>
+    <errorConditionFormula>ISBLANK( PAN_Card__c ) &amp;&amp;  $Profile.Name = &apos;Customer Care&apos;</errorConditionFormula>
+    <errorMessage>PAN card must not be blank for Customer Care Profile Users</errorMessage>
+</ValidationRule>

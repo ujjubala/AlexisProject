@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Account Form with Input Field" >
+        <lightning-record-edit-form object-api-name="Account">
+            <lightning-input dataformfield="dateFrom" type="date" label="Enter From Date" onchange={newFromDateHandler}></lightning-input><br/>
+            <lightning-input dataformfield="dateTo" type="date" label="Enter To Date" onchange={newToDateHandler}></lightning-input><br/>
+            <lightning-input-field field-name="Type" onchange={typeHandler} ></lightning-input-field>
+        </lightning-record-edit-form>
+        Total Records Found DATA TABLE = {recordsFound} <br/>
+        <template lwc:if={showTableFlag}>
+           <lightning-datatable
+            key-field="Id"
+            data={accList}
+            columns={accColumns}    
+            draft-values={draftValues} >
+            </lightning-datatable>
+       </template>
+
+    </lightning-card>
+  
+</template>

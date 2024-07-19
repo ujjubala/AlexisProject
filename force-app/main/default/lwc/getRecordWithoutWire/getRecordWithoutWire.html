@@ -1,0 +1,13 @@
+<template>
+    <template if:true={contact}>
+            <div>
+                <p>Name: {contact.Name.value}</p>
+                <p>Email: {contact.Email.value}</p>
+                <p>Mobile: {contact.MobilePhone.value}</p>
+            </div>
+        </template>
+        <template if:false={contact}>
+            <p>Loading contact details...</p>
+        </template>
+    </template>
+    
